@@ -2,7 +2,7 @@
 
 ## Information
 
-[🎦 Slides]() | [📃 COMPAS docs](https://compas.dev)
+[🎦 Slides](https://docs.google.com/presentation/d/1YkNU2KeMX9iotR79TOqGxQhPTd6fq15RnppwAX3oJYk/edit) | [📃 COMPAS docs](https://compas.dev)
 
 ## Requirements
 
