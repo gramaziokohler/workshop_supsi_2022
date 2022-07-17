@@ -1,4 +1,4 @@
-name: fc22
+name: fab22
 channels:
     - conda-forge
 
