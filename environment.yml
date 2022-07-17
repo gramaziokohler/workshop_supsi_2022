@@ -9,5 +9,6 @@ dependencies:
    - compas=1.16
    - compas_fab=0.26
    - compas_cgal=0.4
+   - compas_rrc=1.1
    - pip:
      - ur-rtde==1.5.1
