@@ -1,6 +1,4 @@
-# SUPSI Summer School
-
-## Information
+# SUPSI SUPERFAB Summer School
 
 [🎦 Slides](https://docs.google.com/presentation/d/1YkNU2KeMX9iotR79TOqGxQhPTd6fq15RnppwAX3oJYk/edit) | [📃 COMPAS docs](https://compas.dev)
 
@@ -29,12 +27,12 @@ Make sure you run this at least once:
 </p>
 </details>
 
-    (base) conda env create -f https://dfab.link/fc22.yml
+    (base) conda env create -f https://dfab.link/supsi22.yml
 
 ### Add to Rhino
 
-    (base) conda activate fc22
-    (fc22) python -m compas_rhino.install -v 7.0
+    (base)  conda activate fab22
+    (fab22) python -m compas_rhino.install -v 7.0
 
 ### Get the workshop files
 
@@ -42,21 +40,21 @@ Download the [zip file from Github](https://github.com/gramaziokohler/workshop_s
 
 Or optionally, clone the repository instead:
 
-    (fc22) cd Documents
-    (fc22) git clone https://github.com/gramaziokohler/workshop_supsi_2022.git
+    (fab22) cd Documents
+    (fab22) git clone https://github.com/gramaziokohler/workshop_supsi_2022.git
 
 ### Verify installation
 
-    (fc22) python -m compas
+    (fab22) python -m compas
 
     Yay! COMPAS is installed correctly!
 
     COMPAS: 1.16.0
-    Python: 3.9.13 (CPython)
+    Python: 3.8.13 (CPython)
     Extensions: ['compas-fab', 'compas-cgal', 'compas-rrc']
 
 ### Update installation
 
 To update your environment:
 
-    (fc22) conda env update -f https://dfab.link/fc22.yml
+    (fab22) conda env update -f https://dfab.link/supsi22.yml
