@@ -16,15 +16,16 @@ nodecolor = {}
 edgecolor = {}
 
 for u, v in pairwise(nodes):
-    nodecolor[v] = (0, 255, 0)
-    edgecolor[u, v] = edgecolor[v, u] = (0, 255, 0)
+    nodecolor[v] = (0., 1., 0.)
+    edgecolor[u, v] = edgecolor[v, u] = (0., 1., 0.)
 
-nodecolor[start] = (255, 0, 0)
-nodecolor[goal] = (0, 0, 255)
+nodecolor[start] = (1., 0., 0.)
+nodecolor[goal] = (0., 0., 1.)
 
 print(network.summary())
 
 artist = Artist(network, layer='network')
 artist.clear_layer()
-artist.draw_nodelabels(color=nodecolor)
+artist.draw_nodes(color=nodecolor)
+artist.draw_nodelabels()
 artist.draw_edges(color=edgecolor)

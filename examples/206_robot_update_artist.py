@@ -20,8 +20,7 @@ for _ in range(20):
         config.joint_values[j] += steps[j]
 
     artist.update(config)
-    # # If running in Rhino, uncomment the following
-    # artist.clear()
-    # artist.draw_visual()
+    artist.clear()
+    artist.draw_visual()
     artist.redraw()
     time.sleep(0.02)

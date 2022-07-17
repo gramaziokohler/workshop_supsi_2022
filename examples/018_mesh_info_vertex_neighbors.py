@@ -8,12 +8,12 @@ vertex = mesh.get_any_vertex()
 nbrs = mesh.vertex_neighbors(vertex)
 
 vertexcolor = {}
-vertexcolor[vertex] = (1, 0, 0)
+vertexcolor[vertex] = (1., 0., 0.)
 edgecolor = {}
 for nbr in nbrs:
-    vertexcolor[nbr] = (0, 0, 1)
-    edgecolor[vertex, nbr] = (0, 1, 0)
-    edgecolor[nbr, vertex] = (0, 1, 0)
+    vertexcolor[nbr] = (0., 0., 1.)
+    edgecolor[vertex, nbr] = (0., 1., 0.)
+    edgecolor[nbr, vertex] = (0., 1., 0.)
 
 plotter = Plotter(figsize=(12, 7.5))
 

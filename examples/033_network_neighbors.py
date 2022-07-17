@@ -10,14 +10,14 @@ network = Network.from_obj(compas.get('grid_irregular.obj'))
 node = random.choice(list(network.nodes()))
 nbrs = network.neighbors(node)
 
-facecolor = {node: (255, 0, 0)}
+facecolor = {node: (1., 0., 0.)}
 for nbr in nbrs:
-    facecolor[nbr] = (0, 0, 255)
+    facecolor[nbr] = (0., 0., 1.)
 
 edgecolor = {}
 for nbr in nbrs:
-    edgecolor[node, nbr] = (255, 0, 0)
-    edgecolor[nbr, node] = (255, 0, 0)
+    edgecolor[node, nbr] = (1., 0., 0.)
+    edgecolor[nbr, node] = (1., 0., 0.)
 
 print(network.summary())
 
@@ -25,5 +25,6 @@ text = {node: network.node_attribute(node, 'weight') for node in network.nodes()
 
 artist = Artist(network, layer='network')
 artist.clear_layer()
-artist.draw_nodelabels(color=facecolor)
+artist.draw_nodes(color=facecolor)
+artist.draw_nodelabels()
 artist.draw_edges(color=edgecolor)

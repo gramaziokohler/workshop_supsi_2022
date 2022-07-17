@@ -1,4 +1,4 @@
-from compas_fab.backends.kinematics.solvers import UR5Kinematics
+from compas_fab.backends.kinematics.solvers import UR10eKinematics
 
 from compas.artists import Artist
 from compas.geometry import Frame
@@ -8,7 +8,7 @@ model = RobotModel.ur5(load_geometry=True)
 
 f = Frame((0.417, 0.191, -0.005), (-0.000, 1.000, 0.000), (1.000, 0.000, 0.00))
 
-solutions = UR5Kinematics().inverse(f)
+solutions = UR10eKinematics().inverse(f)
 
 artist = Artist(model, layer='IK')
 

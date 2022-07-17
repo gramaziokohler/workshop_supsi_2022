@@ -1,4 +1,4 @@
-"""Example: Bring a box from the world coordinate system into another coordinate
+"""Exercise: Bring a box from the world coordinate system into another coordinate
 system and view in Rhino.
 """
 from compas.artists import Artist

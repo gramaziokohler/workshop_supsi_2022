@@ -8,9 +8,9 @@ face = mesh.get_any_face()
 nbrs = mesh.face_neighbors(face)
 
 facecolor = {}
-facecolor[face] = (1, .8, .8)
+facecolor[face] = (1., .8, .8)
 for nbr in nbrs:
-    facecolor[nbr] = (.8, 1, .8)
+    facecolor[nbr] = (.8, 1., .8)
 
 plotter = Plotter(figsize=(12, 7.5))
 

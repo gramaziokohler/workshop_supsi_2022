@@ -8,7 +8,7 @@ plotter = Plotter(figsize=(12, 7.5))
 
 meshartist = plotter.add(mesh)
 meshartist.draw_vertices(
-    color={vertex: (1, 0, 0) for vertex in mesh.vertices_on_boundary()},
+    color={vertex: (1., 0., 0.) for vertex in mesh.vertices_on_boundary()},
 )
 meshartist.draw_faces()
 
