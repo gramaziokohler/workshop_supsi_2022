@@ -45,3 +45,19 @@ def set_tool_digital_io(signal, value, ip="127.0.0.1"):
     io = RTDEIOInterface(ip)
     io.setToolDigitalOut(signal, value)
 
+
+def get_tcp_pose(ip="127.0.0.1"):
+    ur_r = RTDEReceive(ip)
+    tcp = ur_r.getActualTCPPose()
+    return tcp
+
+
+if __name__ == "__main__":
+    ip = "192.168.0.10"
+    ur_c = RTDEControl(ip)
+    tcp = ur_c.getTCPOffset()
+    # tcp = [-0.0016567930579185486, 9.985990618588403e-05, 0.07716625928878784]
+    print (tcp)
+
+    cfg = get_config(ip)
+    print(cfg.joint_values)
