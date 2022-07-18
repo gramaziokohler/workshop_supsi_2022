@@ -5,9 +5,8 @@ from compas.robots import Configuration
 with RosClient("localhost") as client:
     robot = client.load_robot()
 
-    configuration = Configuration.from_revolute_values(
-        [-2.238, -1.153, -2.174, 0.185, 0.667, 0.0]
-    )
+    configuration = robot.zero_configuration()
+    configuration.joint_values = (-0.106, -5.254, -2.231, 5.915, 4.712, -4.818)
 
     frame_WCF = robot.forward_kinematics(configuration)
 
