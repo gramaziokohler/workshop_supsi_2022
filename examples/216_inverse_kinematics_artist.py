@@ -1,14 +1,21 @@
-from compas_fab.backends.kinematics.solvers import UR10eKinematics
+import os
+
+from compas_fab.backends.kinematics.solvers import OffsetWristKinematics
 
 from compas.artists import Artist
 from compas.geometry import Frame
+from compas.robots import LocalPackageMeshLoader
 from compas.robots import RobotModel
 
-model = RobotModel.ur5(load_geometry=True)
+DATA = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+model = RobotModel.from_urdf_file(os.path.join(DATA, 'ur10e.urdf'))
+loader = LocalPackageMeshLoader(DATA, 'ur_description')
+model.load_geometry(loader)
 
 f = Frame((0.417, 0.191, -0.005), (-0.000, 1.000, 0.000), (1.000, 0.000, 0.00))
 
-solutions = UR10eKinematics().inverse(f)
+UR10eKinematics = OffsetWristKinematics([0.1807, -0.6127, -0.57155, 0.17415, 0.11985, 0.11655])
+solutions = UR10eKinematics.inverse(f)
 
 artist = Artist(model, layer='IK')
 
