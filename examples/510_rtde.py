@@ -23,6 +23,12 @@ def move_to_joints(config, speed, accel, nowait, ip="127.0.0.1"):
     ur_c.moveJ(config.joint_values, speed, accel, nowait)
 
 
+def movel_to_joints(config, speed, accel, nowait, ip="127.0.0.1"):
+    # speed rad/s, accel rad/s^2, nowait bool
+    ur_c = RTDEControl(ip)
+    ur_c.moveL_FK(config.joint_values, speed, accel, nowait)
+
+
 def send_trajectory(configs, speed, accel, nowait, ip="127.0.0.1"):
     # speed rad/s, accel rad/s^2, nowait bool
     ur_c = RTDEControl(ip)
